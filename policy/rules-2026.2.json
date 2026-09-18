@@ -1,0 +1,52 @@
+{
+  "version": "2026.2",
+  "effectiveFrom": "2026-09-01T00:00:00+08:00",
+  "resources": {
+    "counselling": { "capacity": 3, "sessionDays": 14 },
+    "temporary-load-relief": { "capacity": 2, "sessionDays": 30 },
+    "peer-support": { "capacity": 5, "sessionDays": 21 }
+  },
+  "urgency": {
+    "standard": { "weight": 1 },
+    "priority": { "weight": 3 },
+    "immediate": { "weight": 6 }
+  },
+  "aging": { "perDay": 0.1, "maxBonus": 2 },
+  "proof": { "minRemainingDaysAtSubmit": 7, "mustBeValidAtAllocation": true },
+  "coolingOff": { "afterWithdrawalDays": 7, "afterNoShowDays": 30 },
+  "roles": {
+    "teacher": [
+      "application:create",
+      "application:view-own",
+      "application:withdraw-own",
+      "application:appeal-own",
+      "proof:update-own"
+    ],
+    "operator": [
+      "application:view-any",
+      "application:escalate",
+      "application:no-show",
+      "application:complete",
+      "application:review",
+      "proof:update-any",
+      "queue:view",
+      "capacity:view",
+      "policy:view"
+    ],
+    "manager": [
+      "application:view-any",
+      "application:escalate",
+      "application:no-show",
+      "application:complete",
+      "application:review",
+      "proof:update-any",
+      "queue:view",
+      "capacity:view",
+      "policy:view",
+      "policy:publish",
+      "sensitive:read",
+      "audit:view",
+      "decision:recompute"
+    ]
+  }
+}
