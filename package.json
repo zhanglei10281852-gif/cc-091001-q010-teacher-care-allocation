@@ -1,1 +1,14 @@
-{"name":"teacher-care-allocation","version":"0.1.0","private":true,"type":"module","scripts":{"test":"node --test"},"engines":{"node":">=20"},"description":"教师关怀资源分配领域资料"}
+{
+  "name": "teacher-care-allocation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "description": "教师关怀资源公平分配服务：最小披露资格核验、优先级排队、容量保护与候补递补"
+}
